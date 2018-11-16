@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe UsersController, type: :controller do
+RSpec.describe UsersController, type: :controller do
   
   describe 'GET #new' do 
     it 'renders the new template' do 
@@ -15,14 +15,16 @@ Rspec.describe UsersController, type: :controller do
         post :create, params: {user: {email: 'email@gmail.com',password: 'password'}}
         user = User.find_by_credentials('email@gmail.com', 'password')
         expect(session[:session_token]).to eq(user.session_token)
-      end
-      it 'is redirected to the user\s page' do 
-        post :create, params: {user: {email: 'email@gmail.com',password: 'password'}}
-        user = User.find_by_credentials('email@gmail.com', 'password')
         expect(response).to redirect_to(user_url(user))
       end
     end
-    # context
+    context 'with invalid params' do
+      it 'shows errors' do
+        post :create, params: {user: {email: 'email@gmail.com', password: ''}}
+        expect(flash[:errors]).to be_present
+        expect(response).to render_template(:new)
+      end    
+    end
   end
   
   
