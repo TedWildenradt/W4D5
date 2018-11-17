@@ -898,3 +898,172 @@ Processing by SessionsController#destroy as HTML
 Completed 200 OK in 88ms (Views: 40.2ms | ActiveRecord: 12.1ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGoals (20181117000408)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (53.2ms)[0m  [1m[35mCREATE TABLE "goals" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "public" boolean NOT NULL, "completed" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181117000408_create_goals.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_goals_on_user_id" ON "goals"  ("user_id")[0m
+  ↳ db/migrate/20181117000408_create_goals.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181117000408"]]
+  ↳ bin/rails:9
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/var/rbenv/versions/2.5.0/bin/annotate:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGoals (20181117000408)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (77.0ms)[0m  [1m[35mDROP INDEX  "index_goals_on_user_id"[0m
+  ↳ bin/rails:9
+  [1m[35m (60.5ms)[0m  [1m[35mDROP TABLE "goals"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181117000408"]]
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGoals (20181117000408)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGoals (20181117000408)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (50.5ms)[0m  [1m[35mCREATE TABLE "goals" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "public" boolean DEFAULT TRUE, "completed" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181117000408_create_goals.rb:3
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE  INDEX  "index_goals_on_user_id" ON "goals"  ("user_id")[0m
+  ↳ db/migrate/20181117000408_create_goals.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181117000408"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (29.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddtitleTogoalsTable (20181117003143)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.3ms)[0m  [1m[35mALTER TABLE "goals" ADD "title" character varying NOT NULL[0m
+  ↳ db/migrate/20181117003143_addtitle_togoals_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181117003143"]]
+  ↳ bin/rails:9
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5127289673306338650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/1/goals/new" for 127.0.0.1 at 2018-11-16 16:47:51 -0800
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by GoalsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering goals/new.html.erb within layouts/application
+  Rendered goals/new.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 295ms (Views: 184.2ms | ActiveRecord: 22.3ms)
+
+
+Started POST "/users/1/goals" for 127.0.0.1 at 2018-11-16 16:48:09 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"authenticity_token"=>"YTQrcxcb8KT14mUDc3h0yac23X6ktpvPXAEZLm5ykaqDg+Hu2Ry3i5AyR2mTFYTuEUcVTl1N4N8r/0tqNizobA==", "goal"=>{"title"=>"no", "body"=>"i dont have any goal", "public"=>"false"}, "user_id"=>"1"}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: goals:
+  app/controllers/goals_controller.rb:53:in `goal_params'
+  app/controllers/goals_controller.rb:17:in `create'
+
+Started POST "/__better_errors/5768b787c6278caa/variables" for 127.0.0.1 at 2018-11-16 16:48:10 -0800
+Started POST "/__better_errors/5768b787c6278caa/eval" for 127.0.0.1 at 2018-11-16 16:48:15 -0800
+Started POST "/users/1/goals" for 127.0.0.1 at 2018-11-16 16:49:19 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"authenticity_token"=>"YTQrcxcb8KT14mUDc3h0yac23X6ktpvPXAEZLm5ykaqDg+Hu2Ry3i5AyR2mTFYTuEUcVTl1N4N8r/0tqNizobA==", "goal"=>{"title"=>"no", "body"=>"i dont have any goal", "public"=>"false"}, "user_id"=>"1"}
+Completed 400 Bad Request in 18ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: goals:
+  app/controllers/goals_controller.rb:53:in `goal_params'
+  app/controllers/goals_controller.rb:17:in `create'
+
+Started POST "/__better_errors/43cae7a41e0f8db9/variables" for 127.0.0.1 at 2018-11-16 16:49:19 -0800
+Started POST "/__better_errors/43cae7a41e0f8db9/eval" for 127.0.0.1 at 2018-11-16 16:49:30 -0800
+Started POST "/users/1/goals" for 127.0.0.1 at 2018-11-16 16:49:52 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"authenticity_token"=>"YTQrcxcb8KT14mUDc3h0yac23X6ktpvPXAEZLm5ykaqDg+Hu2Ry3i5AyR2mTFYTuEUcVTl1N4N8r/0tqNizobA==", "goal"=>{"title"=>"no", "body"=>"i dont have any goal", "public"=>"false", "completed"=>"true"}, "user_id"=>"1"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: goals:
+  app/controllers/goals_controller.rb:53:in `goal_params'
+  app/controllers/goals_controller.rb:17:in `create'
+
+Started POST "/__better_errors/1db4757a110b0dc3/variables" for 127.0.0.1 at 2018-11-16 16:49:52 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:49:57 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:50:26 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:50:32 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:51:43 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:53:53 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:53:59 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:54:20 -0800
+Started POST "/__better_errors/1db4757a110b0dc3/eval" for 127.0.0.1 at 2018-11-16 16:54:37 -0800
